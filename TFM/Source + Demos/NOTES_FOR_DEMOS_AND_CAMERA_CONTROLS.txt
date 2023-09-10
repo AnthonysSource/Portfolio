@@ -1,0 +1,5 @@
+Demos require a machine with a dedicated graphics card
+
+W/A/S/D -> Move Forward/Left/Back/Right
+Q/E -> Move Up/Down
+Mouse -> Rotate Camera

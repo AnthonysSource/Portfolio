@@ -1,9 +1,0 @@
-
-
-namespace Cookie {
-
-	namespace Memory {
-
-	}
-
-}

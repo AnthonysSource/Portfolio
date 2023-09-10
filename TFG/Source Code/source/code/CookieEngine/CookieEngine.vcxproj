@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Win64|x64">
+      <Configuration>Debug Win64</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Win64|x64">
+      <Configuration>Release Win64</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Shipping Win64|x64">
+      <Configuration>Shipping Win64</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5500CE5A-4163-5DFF-EAE8-95B5D62A2982}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CookieEngine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win64|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win64|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping Win64|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug Win64|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release Win64|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Shipping Win64|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win64|x64'">
+    <OutDir>..\..\..\bin\CookieEngine\Debug-windows-x86_64\</OutDir>
+    <IntDir>..\..\..\bin-obj\CookieEngine\Debug-windows-x86_64\</IntDir>
+    <TargetName>CookieEngine</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win64|x64'">
+    <OutDir>..\..\..\bin\CookieEngine\Release-windows-x86_64\</OutDir>
+    <IntDir>..\..\..\bin-obj\CookieEngine\Release-windows-x86_64\</IntDir>
+    <TargetName>CookieEngine</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping Win64|x64'">
+    <OutDir>..\..\..\bin\CookieEngine\Shipping-windows-x86_64\</OutDir>
+    <IntDir>..\..\..\bin-obj\CookieEngine\Shipping-windows-x86_64\</IntDir>
+    <TargetName>CookieEngine</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win64|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>COOKIE_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;COOKIE_DEBUG;CKE_ASSERTS;COOKIE_LOGGING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>ThirdParty\glfw\include;ThirdParty\glad\include;ThirdParty\glm;ThirdParty\imgui;ThirdParty\stb_image;ThirdParty\spdlog\include;ThirdParty\optick\src;ThirdParty\box2d\include;Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Win64|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>COOKIE_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;COOKIE_DEBUG;CKE_ASSERTS;COOKIE_LOGGING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>ThirdParty\glfw\include;ThirdParty\glad\include;ThirdParty\glm;ThirdParty\imgui;ThirdParty\stb_image;ThirdParty\spdlog\include;ThirdParty\optick\src;ThirdParty\box2d\include;Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipping Win64|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>COOKIE_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>ThirdParty\glfw\include;ThirdParty\glad\include;ThirdParty\glm;ThirdParty\imgui;ThirdParty\stb_image;ThirdParty\spdlog\include;ThirdParty\optick\src;ThirdParty\box2d\include;Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine\Ckpch.h" />
+    <ClInclude Include="Engine\CookieEngine.h" />
+    <ClInclude Include="Engine\Core\Application.h" />
+    <ClInclude Include="Engine\Core\Core_API.h" />
+    <ClInclude Include="Engine\Core\Defines.h" />
+    <ClInclude Include="Engine\Core\FileSystem\FileSystem.h" />
+    <ClInclude Include="Engine\Core\FileSystem\FileSystemTest.h" />
+    <ClInclude Include="Engine\Core\InputSystem\InputSystem.h" />
+    <ClInclude Include="Engine\Core\InputSystem\KeyCodes.h" />
+    <ClInclude Include="Engine\Core\Logging\Log.h" />
+    <ClInclude Include="Engine\Core\Math\Math.h" />
+    <ClInclude Include="Engine\Core\Memory\Memory.h" />
+    <ClInclude Include="Engine\Core\Platform\Platform.h" />
+    <ClInclude Include="Engine\Core\Profiling\Profiling.h" />
+    <ClInclude Include="Engine\Core\Random\Random.h" />
+    <ClInclude Include="Engine\Core\Time\Time.h" />
+    <ClInclude Include="Engine\Core\Types\Containers.h" />
+    <ClInclude Include="Engine\Core\Types\Function.h" />
+    <ClInclude Include="Engine\Core\Types\Pointers.h" />
+    <ClInclude Include="Engine\Core\Types\PrimitiveTypes.h" />
+    <ClInclude Include="Engine\Core\Types\String.h" />
+    <ClInclude Include="Engine\Core\Window.h" />
+    <ClInclude Include="Engine\Entities\BaseComponents.h" />
+    <ClInclude Include="Engine\Entities\Common.h" />
+    <ClInclude Include="Engine\Entities\ComponentArray.h" />
+    <ClInclude Include="Engine\Entities\Components\CameraComponent.h" />
+    <ClInclude Include="Engine\Entities\Components\PhysicsComponent.h" />
+    <ClInclude Include="Engine\Entities\Components\RenderComponent.h" />
+    <ClInclude Include="Engine\Entities\Components\ScriptComponent.h" />
+    <ClInclude Include="Engine\Entities\Components\SingletonInputComponent.h" />
+    <ClInclude Include="Engine\Entities\Components\TransformComponent.h" />
+    <ClInclude Include="Engine\Entities\Entities_API.h" />
+    <ClInclude Include="Engine\Entities\EntityAdmin.h" />
+    <ClInclude Include="Engine\Entities\System.h" />
+    <ClInclude Include="Engine\Physics\PhysicsSystem.h" />
+    <ClInclude Include="Engine\Render\IMGUI\IMGUI_Impl.h" />
+    <ClInclude Include="Engine\Render\RenderAPI.h" />
+    <ClInclude Include="Engine\Render\RenderingSystem.h" />
+    <ClInclude Include="Engine\Resources\Resources.h" />
+    <ClInclude Include="ThirdParty\imgui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="ThirdParty\imgui\backends\imgui_impl_opengl2.h" />
+    <ClInclude Include="ThirdParty\imgui\backends\imgui_impl_opengl3.h" />
+    <ClInclude Include="ThirdParty\imgui\backends\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="ThirdParty\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="ThirdParty\imgui\imconfig.h" />
+    <ClInclude Include="ThirdParty\imgui\imgui.h" />
+    <ClInclude Include="ThirdParty\imgui\imgui_internal.h" />
+    <ClInclude Include="ThirdParty\imgui\imstb_rectpack.h" />
+    <ClInclude Include="ThirdParty\imgui\imstb_textedit.h" />
+    <ClInclude Include="ThirdParty\imgui\imstb_truetype.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick.config.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick_capi.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick_common.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick_core.freebsd.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick_core.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick_core.linux.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick_core.macos.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick_core.platform.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick_core.win.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick_gpu.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick_memory.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick_message.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick_miniz.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick_serialization.h" />
+    <ClInclude Include="ThirdParty\optick\src\optick_server.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine\Core\Application.cpp" />
+    <ClCompile Include="Engine\Core\FileSystem\FileSystem.cpp" />
+    <ClCompile Include="Engine\Core\InputSystem\InputSystem.cpp" />
+    <ClCompile Include="Engine\Core\Logging\Log.cpp" />
+    <ClCompile Include="Engine\Core\Memory\Memory.cpp" />
+    <ClCompile Include="Engine\Core\Platform\Platform.cpp" />
+    <ClCompile Include="Engine\Core\Profiling\Profiling.cpp" />
+    <ClCompile Include="Engine\Core\Random\Random.cpp" />
+    <ClCompile Include="Engine\Core\Time\Time.cpp" />
+    <ClCompile Include="Engine\Entities\EntityAdmin.cpp" />
+    <ClCompile Include="Engine\Physics\PhysicsSystem.cpp" />
+    <ClCompile Include="Engine\Render\IMGUI\IMGUI_Impl.cpp" />
+    <ClCompile Include="Engine\Render\RenderAPI.cpp" />
+    <ClCompile Include="Engine\Render\RenderingSystem.cpp" />
+    <ClCompile Include="Engine\Resources\Resources.cpp" />
+    <ClCompile Include="ThirdParty\glad\src\glad.c" />
+    <ClCompile Include="ThirdParty\imgui\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="ThirdParty\imgui\backends\imgui_impl_opengl2.cpp" />
+    <ClCompile Include="ThirdParty\imgui\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="ThirdParty\imgui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="ThirdParty\imgui\imgui.cpp" />
+    <ClCompile Include="ThirdParty\imgui\imgui_demo.cpp" />
+    <ClCompile Include="ThirdParty\imgui\imgui_draw.cpp" />
+    <ClCompile Include="ThirdParty\imgui\imgui_tables.cpp" />
+    <ClCompile Include="ThirdParty\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="ThirdParty\optick\src\optick_capi.cpp" />
+    <ClCompile Include="ThirdParty\optick\src\optick_core.cpp" />
+    <ClCompile Include="ThirdParty\optick\src\optick_gpu.cpp" />
+    <ClCompile Include="ThirdParty\optick\src\optick_gpu.d3d12.cpp" />
+    <ClCompile Include="ThirdParty\optick\src\optick_gpu.vulkan.cpp" />
+    <ClCompile Include="ThirdParty\optick\src\optick_message.cpp" />
+    <ClCompile Include="ThirdParty\optick\src\optick_miniz.cpp" />
+    <ClCompile Include="ThirdParty\optick\src\optick_serialization.cpp" />
+    <ClCompile Include="ThirdParty\optick\src\optick_server.cpp" />
+    <ClCompile Include="ThirdParty\stb_image\cke_stb.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ThirdParty\glfw\GLFW.vcxproj">
+      <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="ThirdParty\box2d\Box2D.vcxproj">
+      <Project>{A434E80C-1049-10BE-D9CA-B31D459E0CEF}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

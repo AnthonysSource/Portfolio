@@ -1,0 +1,8 @@
+# Visual Studio Config
+.vs/
+
+# Project Assets and build output
+Data/
+Output/
+
+Code/Runtime/Core/ThirdParty/
