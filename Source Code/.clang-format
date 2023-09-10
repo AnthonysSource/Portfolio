@@ -1,0 +1,12 @@
+{
+    BasedOnStyle: LLVM,
+    UseTab: Always,
+    IndentWidth: 4,
+    TabWidth: 4,
+    ColumnLimit: 140,
+    NamespaceIndentation: All,
+    MaxEmptyLinesToKeep: 3,
+    SortIncludes: false,
+    IndentPPDirectives: BeforeHash,
+    AccessModifierOffset: -4,
+}
